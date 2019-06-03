@@ -4,11 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "serve -s -l 3000 -c serve.json"
+    "start": "serve -s -l 3000"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "import-map-overrides": "^1.5.0",
+    "single-spa": "^4.3.4",
+    "systemjs": "^3.1.6",
+    "zone.js": "^0.8.26"
+  },
+  "devDependencies": {
     "serve": "^11.0.1"
   }
 }

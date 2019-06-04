@@ -11,7 +11,8 @@
     {
       "imports": {
         "single-spa": "/node_modules/single-spa/lib/system/single-spa.min.js",
-        "new-app": "https://spa-module-ng.firebaseapp.com/main.87fc9dec33dd30b4f751.js"
+        "ng1-app": "http://localhost:9001/main.bundle.js",
+        "ng1-mixin": "http://localhost:9001/mixin.bundle.js"
       }
     }
   </script>
@@ -26,12 +27,28 @@
 </head>
 
 <body>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/ng1">AngularJs</a></li>
+      <li><a href="/ng1-mixin">AngularJs with legacy module</a></li>
+    </ul>
+  </nav>
+
+  <div id="angularjs"></div>
+  <div id="angularjs-mixin"></div>
   <script>
     System.import('single-spa').then(function (singleSpa) {
       singleSpa.registerApplication(
-        'new-app',
-        () => System.import('new-app'),
-        location => true
+        'ng1-app',
+        () => System.import('ng1-app'),
+        location => location.pathname.startsWith('/ng1')
+      )
+
+      singleSpa.registerApplication(
+        'ng1-mixin',
+        () => System.import('ng1-mixin'),
+        location => location.pathname.startsWith('/ng1-mixin')
       )
 
       singleSpa.start();

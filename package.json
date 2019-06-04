@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "serve -s -l 3000"
+    "start": "serve -s -l 3000",
+    "start:spa-module-ng1": "cd spa-module-ng1 && npm start"
   },
   "author": "",
   "license": "ISC",

@@ -7,6 +7,7 @@
     "serve-root": "serve -s -l 3000",
     "serve-spa-module-ng1": "cd spa-module-ng1 && npm start",
     "serve-spa-module-ng": "cd spa-module-ng && npm run serve:single-spa",
+    "serve-spa-module-react": "cd spa-module-react && npm start",
     "start": "concurrently \"npm:serve-*\""
   },
   "author": "",

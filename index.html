@@ -13,7 +13,8 @@
         "single-spa": "/node_modules/single-spa/lib/system/single-spa.min.js",
         "ng1-app": "http://localhost:9001/main.bundle.js",
         "ng1-mixin": "http://localhost:9001/mixin.bundle.js",
-        "angular7": "http://localhost:4201/main.js"
+        "angular7": "http://localhost:4201/main.js",
+        "navbar": "http://localhost:9005/singleSpa.bundle.js"
       }
     }
   </script>
@@ -31,15 +32,6 @@
 </head>
 
 <body>
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/ng1">AngularJs</a></li>
-      <li><a href="/ng1-mixin">AngularJs with legacy module</a></li>
-      <li><a href="/angular7">Angular</a></li>      
-    </ul>
-  </nav>
-
   <div id="angularjs"></div>
   <div id="angularjs-mixin"></div>
   <script>
@@ -60,6 +52,12 @@
         'angular7',
         () => System.import('angular7'),
         location => location.pathname.startsWith('/angular7')
+      )
+
+      singleSpa.registerApplication(
+        'navbar',
+        () => System.import('navbar'),
+        location => true
       )
 
       singleSpa.start();

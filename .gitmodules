@@ -4,3 +4,6 @@
 [submodule "spa-module-ng"]
 	path = spa-module-ng
 	url = https://github.com/l7960261/spa-module-ng.git
+[submodule "spa-module-react"]
+	path = spa-module-react
+	url = https://github.com/l7960261/spa-module-react.git

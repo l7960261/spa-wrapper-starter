@@ -1,3 +1,6 @@
 [submodule "spa-module-ng1"]
 	path = spa-module-ng1
 	url = https://github.com/l7960261/spa-module-ng1.git
+[submodule "spa-module-ng"]
+	path = spa-module-ng
+	url = https://github.com/l7960261/spa-module-ng.git

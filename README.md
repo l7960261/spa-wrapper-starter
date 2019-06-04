@@ -4,9 +4,10 @@ This is start-kit example repositroy for angularjs project migrating to single-s
 
 ## Local development
 
-It's run one repository at a time.
+Install packages and all submodules need to install packages
 ```
 npm install
+cd spa-module-ng1 && npm install
 cd spa-module-ng1 && npm install
 ```
 

@@ -12,7 +12,8 @@
       "imports": {
         "single-spa": "/node_modules/single-spa/lib/system/single-spa.min.js",
         "ng1-app": "http://localhost:9001/main.bundle.js",
-        "ng1-mixin": "http://localhost:9001/mixin.bundle.js"
+        "ng1-mixin": "http://localhost:9001/mixin.bundle.js",
+        "angular7": "http://localhost:4201/main.js"
       }
     }
   </script>
@@ -35,6 +36,7 @@
       <li><a href="/">Home</a></li>
       <li><a href="/ng1">AngularJs</a></li>
       <li><a href="/ng1-mixin">AngularJs with legacy module</a></li>
+      <li><a href="/angular7">Angular</a></li>      
     </ul>
   </nav>
 
@@ -52,6 +54,12 @@
         'ng1-mixin',
         () => System.import('ng1-mixin'),
         location => location.pathname.startsWith('/ng1-mixin')
+      )
+
+      singleSpa.registerApplication(
+        'angular7',
+        () => System.import('angular7'),
+        location => location.pathname.startsWith('/angular7')
       )
 
       singleSpa.start();

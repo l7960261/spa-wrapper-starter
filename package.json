@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "serve -s -l 3000",
-    "start:spa-module-ng1": "cd spa-module-ng1 && npm start"
+    "serve-root": "serve -s -l 3000",
+    "serve-spa-module-ng1": "cd spa-module-ng1 && npm start",
+    "start": "concurrently \"npm:serve-*\""
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
+    "concurrently": "^4.1.0",
     "serve": "^11.0.1"
   }
 }

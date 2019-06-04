@@ -7,7 +7,7 @@ This is start-kit example repositroy for angularjs project migrating to single-s
 Install packages and all submodules need to install packages
 ```
 npm install
-cd spa-module-ng1 && npm install
+cd spa-module-ng && npm install
 cd spa-module-ng1 && npm install
 ```
 

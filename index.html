@@ -13,7 +13,7 @@
         "single-spa": "/node_modules/single-spa/lib/system/single-spa.min.js",
         "ng1-app": "http://localhost:9001/main.bundle.js",
         "ng1-mixin": "http://localhost:9001/mixin.bundle.js",
-        "angular7": "http://localhost:4201/main.js",
+        "angular": "http://localhost:4201/main.js",
         "navbar": "http://localhost:9005/singleSpa.bundle.js"
       }
     }
@@ -49,9 +49,9 @@
       )
 
       singleSpa.registerApplication(
-        'angular7',
-        () => System.import('angular7'),
-        location => location.pathname.startsWith('/angular7')
+        'angular',
+        () => System.import('angular'),
+        location => location.pathname.startsWith('/angular')
       )
 
       singleSpa.registerApplication(

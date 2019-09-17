@@ -12,7 +12,7 @@
       "imports": {
         "single-spa": "/node_modules/single-spa/lib/system/single-spa.min.js",
         "ng1-app": "http://localhost:9001/main.bundle.js",
-        "ng1-mixin": "http://localhost:9001/mixin.bundle.js",
+        "mixin-ng1": "http://localhost:9001/mixin.bundle.js",
         "angular": "http://localhost:4201/main.js",
         "navbar": "http://localhost:9005/singleSpa.bundle.js"
       }
@@ -44,9 +44,9 @@
       )
 
       singleSpa.registerApplication(
-        'ng1-mixin',
-        () => System.import('ng1-mixin'),
-        location => location.pathname.startsWith('/ng1-mixin')
+        'mixin-ng1',
+        () => System.import('mixin-ng1'),
+        location => location.pathname.startsWith('/mixin-ng1')
       )
 
       singleSpa.registerApplication(
